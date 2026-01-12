@@ -4,26 +4,23 @@ namespace TeenPatti.Card
 {
     public class CardView : MonoBehaviour
     {
-        [SerializeField] private Sprite[] clubCardImages;
-        [SerializeField] private Sprite[] diamondCardImages;
-        [SerializeField] private Sprite[] heartCardImages;
-        [SerializeField] private Sprite[] spadeCardImages;
+        [SerializeField] private CardSO cardSO;
 
         public void SetCardImage(CardHouse cardHouse, string cardName)
         {
             switch (cardHouse)
             {
                 case CardHouse.club:
-                    SetCardImageFromArray(clubCardImages, cardName);
+                    SetCardImageFromArray(cardSO.clubCardImages, cardName);
                     break;
                 case CardHouse.diamond:
-                    SetCardImageFromArray(diamondCardImages, cardName);
+                    SetCardImageFromArray(cardSO.diamondCardImages, cardName);
                     break;
                 case CardHouse.heart:
-                    SetCardImageFromArray(heartCardImages, cardName);
+                    SetCardImageFromArray(cardSO.heartCardImages, cardName);
                     break;
                 case CardHouse.spade:
-                    SetCardImageFromArray(spadeCardImages, cardName);
+                    SetCardImageFromArray(cardSO.spadeCardImages, cardName);
                     break;
                 default:
                     Debug.LogError("Invalid card house!");

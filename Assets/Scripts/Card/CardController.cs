@@ -9,6 +9,14 @@ namespace TeenPatti.Card
         {
             cardModel = new CardModel(cardHouse, cardNumber);
             cardView = new CardView();
+
+            SetCardImage();
+        }
+
+        public void SetCardImage()
+        {
+            string cardName = cardModel.Name;
+            cardView.SetCardImage(cardModel.House, cardName);
         }
     }
 }
