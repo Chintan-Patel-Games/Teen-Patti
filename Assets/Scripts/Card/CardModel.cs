@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace TeenPatti.Card
 {
     public class CardModel
@@ -5,12 +7,13 @@ namespace TeenPatti.Card
         public CardNumber Number { get; private set; }
         public CardHouse House { get; private set; }
         public string Name { get; private set; }
+        public Sprite Image { get; set; }
 
         public CardModel(CardHouse house, CardNumber number)
         {
             House = house;
             Number = number;
-            Name = $"{house}_{number}";
+            Name = $"{house}_{(int)number}_0";
         }
     }
 }

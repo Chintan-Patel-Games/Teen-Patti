@@ -11,6 +11,9 @@ namespace TeenPatti.GameLoop
             gameLoopController = new GameLoopController(GameLoopState.DistributingCards, cardService);
 
         public void StartGameLoop() => gameLoopController.StartGameLoop();
+        public void CheckForWinner() => gameLoopController.CheckForWinner();
+        public void ShowGameResults() => gameLoopController.ShowGameResults();
+        public void ReshuffleCards() => gameLoopController.ReshuffleCards();
 
         public void TickUpdate() => gameLoopController.TickUpdate();
     }
